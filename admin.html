@@ -2,87 +2,119 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>لوحة الإدارة | Templio</title>
+<title>Admin Panel | Templio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-  body {
-    background:#0b1220;
-    color:#e5e7eb;
-    font-family:Segoe UI, Tahoma;
-    padding:40px;
-  }
-
-  .box {
-    max-width:600px;
-    margin:auto;
-    background:#020617;
-    padding:30px;
-    border-radius:20px;
-    border:1px solid #1e293b;
-  }
-
-  h2 {
-    text-align:center;
-    margin-bottom:30px;
-  }
-
-  input, button, textarea {
-    width:100%;
-    padding:14px;
-    margin-bottom:15px;
-    border-radius:12px;
-    border:none;
-    font-size:15px;
-  }
-
-  input, textarea {
-    background:#0b1220;
-    color:white;
-    border:1px solid #1e293b;
-  }
-
-  button {
-    background:#38bdf8;
-    color:#020617;
-    font-weight:bold;
-    cursor:pointer;
-  }
-
-  textarea {
-    height:120px;
-    direction:ltr;
-  }
+body{
+  background:#0b1220;
+  color:#e5e7eb;
+  font-family:Segoe UI,Tahoma;
+  padding:40px;
+}
+.container{
+  max-width:1000px;
+  margin:auto;
+}
+.section{
+  background:#020617;
+  padding:30px;
+  margin-bottom:30px;
+  border-radius:20px;
+  border:1px solid #1e293b;
+}
+h2{
+  margin-bottom:20px;
+  color:#38bdf8;
+}
+input,textarea,button{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border-radius:12px;
+  border:none;
+}
+input,textarea{
+  background:#0b1220;
+  color:white;
+  border:1px solid #1e293b;
+}
+button{
+  background:#38bdf8;
+  color:#020617;
+  font-weight:bold;
+  cursor:pointer;
+}
+textarea{
+  height:140px;
+  direction:ltr;
+}
+.note{
+  font-size:13px;
+  color:#94a3b8;
+}
 </style>
 </head>
 
 <body>
 
-<div class="box">
-  <h2>إضافة قالب / عمل</h2>
+<div class="container">
 
-  <input id="title" placeholder="اسم القالب">
-  <input id="img" placeholder="اسم الصورة (مثال: template1.jpg)">
-  <input id="link" placeholder="رابط Etsy أو أي موقع">
+  <!-- WORKS -->
+  <div class="section">
+    <h2>➕ إضافة عمل</h2>
 
-  <button onclick="generate()">توليد الكود</button>
+    <input id="work-title" placeholder="عنوان العمل (مثال: Social Media Design)">
+    <input id="work-img" placeholder="اسم الصورة (مثال: w1.png أو w1.jpg)">
 
-  <textarea id="output" placeholder="الكود هيظهر هنا"></textarea>
+    <button onclick="generateWork()">توليد كود العمل</button>
+
+    <div class="note" id="work-where"></div>
+    <textarea id="work-code"></textarea>
+  </div>
+
+  <!-- TEMPLATES -->
+  <div class="section">
+    <h2>➕ إضافة قالب</h2>
+
+    <input id="temp-title" placeholder="اسم القالب (مثال: Instagram Post Template)">
+    <input id="temp-img" placeholder="اسم الصورة (مثال: t1.png أو t1.webp)">
+    <input id="temp-link" placeholder="رابط Etsy">
+
+    <button onclick="generateTemplate()">توليد كود القالب</button>
+
+    <div class="note" id="temp-where"></div>
+    <textarea id="temp-code"></textarea>
+  </div>
+
 </div>
 
 <script>
-function generate() {
-  let title = document.getElementById("title").value;
-  let img = document.getElementById("img").value;
-  let link = document.getElementById("link").value;
+function generateWork(){
+  let title = document.getElementById("work-title").value;
+  let img = document.getElementById("work-img").value;
 
-  let code = `
-<a href="${link}" target="_blank" class="item">
-  <img src="${img}" alt="${title}">
-</a>
-  `;
+  let code = `<a href="work.html" class="item">
+  <img src="images/works/${img}" alt="${title}">
+</a>`;
 
-  document.getElementById("output").value = code;
+  document.getElementById("work-code").value = code;
+  document.getElementById("work-where").innerText =
+  "📌 انسخ الكود وضعه داخل <div class='grid'> في ملف works.html";
+}
+
+function generateTemplate(){
+  let title = document.getElementById("temp-title").value;
+  let img = document.getElementById("temp-img").value;
+  let link = document.getElementById("temp-link").value;
+
+  let code = `<a href="${link}" target="_blank" class="item">
+  <img src="images/templates/${img}" alt="${title}">
+</a>`;
+
+  document.getElementById("temp-code").value = code;
+  document.getElementById("temp-where").innerText =
+  "📌 انسخ الكود وضعه داخل <div class='grid'> في ملف templates.html";
 }
 </script>
 
