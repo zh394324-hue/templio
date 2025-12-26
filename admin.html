@@ -1,174 +1,41 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-<meta charset="UTF-8">
-<title>Admin Panel | Templio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body{
-  background:#0b1220;
-  color:#e5e7eb;
-  font-family:Segoe UI,Tahoma;
-  padding:40px;
-}
-.container{
-  max-width:1100px;
-  margin:auto;
-}
-.section{
-  background:#020617;
-  padding:30px;
-  margin-bottom:35px;
-  border-radius:22px;
-  border:1px solid #1e293b;
-}
-h2{
-  margin-bottom:20px;
-  color:#38bdf8;
-}
-input,textarea,button{
-  width:100%;
-  padding:14px;
-  margin-bottom:15px;
-  border-radius:14px;
-  border:none;
-}
-input,textarea{
-  background:#0b1220;
-  color:white;
-  border:1px solid #1e293b;
-}
-button{
-  background:#38bdf8;
-  color:#020617;
-  font-weight:bold;
-  cursor:pointer;
-}
-button:hover{
-  opacity:.9;
-}
-textarea{
-  height:150px;
-  direction:ltr;
-}
-.note{
-  font-size:13px;
-  color:#94a3b8;
-  margin-bottom:10px;
-}
-.alert{
-  color:#f87171;
-  font-size:13px;
-  margin-bottom:10px;
-}
-.success{
-  color:#4ade80;
-  font-size:13px;
-  margin-bottom:10px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Admin</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="admin-container">
+  <h2>إضافة عمل</h2>
+  <input id="wimg" placeholder="اسم الصورة">
+  <button onclick="work()">توليد كود العمل</button>
+  <pre id="wout"></pre>
 
-  <!-- WORKS -->
-  <div class="section">
-    <h2>🖼️ إضافة عمل</h2>
-
-    <input id="work-title" placeholder="عنوان العمل (مثال: Branding Design)">
-    <input id="work-img" placeholder="اسم الصورة (مثال: work1.png)">
-    
-    <div id="work-msg"></div>
-
-    <button onclick="generateWork()">توليد كود العمل</button>
-
-    <div class="note">📌 ضع الكود داخل &lt;div class="grid"&gt; في ملف <b>works.html</b></div>
-    <textarea id="work-code" readonly></textarea>
-  </div>
-
-  <!-- TEMPLATES -->
-  <div class="section">
-    <h2>🎨 إضافة قالب</h2>
-
-    <input id="temp-title" placeholder="اسم القالب (مثال: Instagram Post Template)">
-    <input id="temp-img" placeholder="اسم الصورة (مثال: temp1.webp)">
-    <input id="temp-link" placeholder="رابط Etsy">
-
-    <div id="temp-msg"></div>
-
-    <button onclick="generateTemplate()">توليد كود القالب</button>
-
-    <div class="note">📌 ضع الكود داخل &lt;div class="grid"&gt; في ملف <b>templates.html</b></div>
-    <textarea id="temp-code" readonly></textarea>
-  </div>
-
+  <h2 style="margin-top:40px;">إضافة قالب</h2>
+  <input id="timg" placeholder="اسم الصورة">
+  <input id="tlink" placeholder="رابط Etsy">
+  <button onclick="temp()">توليد كود القالب</button>
+  <pre id="tout"></pre>
 </div>
 
 <script>
-function generateWork(){
-  let title = document.getElementById("work-title").value.trim();
-  let img = document.getElementById("work-img").value.trim();
-  let msg = document.getElementById("work-msg");
-
-  if(!title || !img){
-    msg.innerHTML = "<div class='alert'>❌ من فضلك املأ كل الحقول</div>";
-    return;
-  }
-
-  let code = `<a href="work.html" class="item">
-  <img src="images/works/${img}" alt="${title}">
-</a>`;
-
-  document.getElementById("work-code").value = code;
-  msg.innerHTML = "<div class='success'>✅ تم توليد الكود بنجاح</div>";
+function work(){
+  wout.textContent =
+`<div class="card">
+  <img src="images/works/${wimg.value}">
+</div>`;
 }
 
-function generateTemplate(){
-  let title = document.getElementById("temp-title").value.trim();
-  let img = document.getElementById("temp-img").value.trim();
-  let link = document.getElementById("temp-link").value.trim();
-  let msg = document.getElementById("temp-msg");
-
-  if(!title || !img || !link){
-    msg.innerHTML = "<div class='alert'>❌ من فضلك املأ كل الحقول</div>";
-    return;
-  }
-
-  let code = `<a href="${link}" target="_blank" class="item">
-  <img src="images/templates/${img}" alt="${title}">
+function temp(){
+  tout.textContent =
+`<a href="${tlink.value}" target="_blank" class="card">
+  <img src="images/templates/${timg.value}">
 </a>`;
-
-  document.getElementById("temp-code").value = code;
-  msg.innerHTML = "<div class='success'>✅ تم توليد الكود بنجاح</div>";
 }
 </script>
 
 </body>
 </html>
-🧠 تستخدمه إزاي (تلخيص سريع)
-1️⃣ ترفع الصورة في الفولدر الصح
 
-أعمال → images/works/
-
-قوالب → images/templates/
-
-2️⃣ تدخل admin.html
-3️⃣ تكتب:
-
-العنوان
-
-اسم الصورة
-
-(ورابط Etsy للقالب)
-4️⃣ توليد
-5️⃣ نسخ
-6️⃣ لصق في:
-
-works.html أو templates.html
-
-داخل <div class="grid">
-
-🎯 ك
