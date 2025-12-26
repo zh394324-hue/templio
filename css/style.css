@@ -133,146 +133,3 @@ pre {
   border-radius: 10px;
   color: #00e5ff;
   overflow-x: auto;
-}
-2️⃣ الصفحة الرئيسية – index.html
-تحط الكود ده كله في index.html
-
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>Templio</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-  <div class="logo-box">
-    🌍
-    <img src="images/Logo.png">
-    <span>Templio</span>
-  </div>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="works.html">الأعمال</a>
-    <a href="templates.html">القوالب</a>
-  </nav>
-</header>
-
-<section class="section">
-  <h1>زياد – مصمم جرافيك</h1>
-  <p>
-    منصة شخصية لعرض أعمالي الاحترافية وبيع القوالب الجاهزة  
-    القوالب يتم شراؤها مباشرة من Etsy
-  </p>
-</section>
-
-</body>
-</html>
-3️⃣ صفحة الأعمال – works.html
-تحطها في works.html
-
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>الأعمال</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-  <div class="logo-box">
-    🌍
-    <img src="images/Logo.png">
-    <span>Templio</span>
-  </div>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="templates.html">القوالب</a>
-  </nav>
-</header>
-
-<section class="section">
-  <h1>أعمالي</h1>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/works/example.jpg">
-    </div>
-  </div>
-</section>
-
-</body>
-</html>
-4️⃣ صفحة القوالب – templates.html
-تحطها في templates.html
-
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>القوالب</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-  <div class="logo-box">
-    🌍
-    <img src="images/Logo.png">
-    <span>Templio</span>
-  </div>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="works.html">الأعمال</a>
-  </nav>
-</header>
-
-<section class="section">
-  <h1>القوالب الجاهزة</h1>
-
-  <div class="grid">
-    <a href="https://etsy.com" target="_blank" class="card">
-      <img src="images/templates/example.jpg">
-    </a>
-  </div>
-</section>
-
-</body>
-</html>
-5️⃣ صفحة الأدمن – admin.html
-دي تولّد كود مش “تلعب في الموقع”
-
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>Admin</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<div class="admin-container">
-  <h2>إضافة عمل</h2>
-  <input id="wimg" placeholder="اسم الصورة">
-  <button onclick="work()">توليد كود العمل</button>
-  <pre id="wout"></pre>
-
-  <h2 style="margin-top:40px;">إضافة قالب</h2>
-  <input id="timg" placeholder="اسم الصورة">
-  <input id="tlink" placeholder="رابط Etsy">
-  <button onclick="temp()">توليد كود القالب</button>
-  <pre id="tout"></pre>
-</div>
-
-<script>
-function work(){
-  wout.textContent =
-`<div class="card">
-  <img src="images/works/${wimg.value}">
-</div>`;
-}
-
-function temp(){
-  tout.text
