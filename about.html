@@ -1,189 +1,77 @@
+حطها في about.html
+
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>من أنا | Templio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    :root {
-      --bg-main: #0b1220;
-      --bg-dark: #020617;
-      --border: #1e293b;
-      --primary: #38bdf8;
-      --text-main: #e5e7eb;
-      --text-muted: #94a3b8;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Arial;
-      background: var(--bg-main);
-      color: var(--text-main);
-      line-height: 1.8;
-    }
-
-    /* ===== Header ===== */
-    header {
-      padding: 25px 60px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    header img {
-      width: 44px;
-      height: 44px;
-    }
-
-    header h1 {
-      font-size: 20px;
-      margin: 0;
-    }
-
-    /* ===== Container ===== */
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 60px;
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    /* ===== Profile Image ===== */
-    .profile-img img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 22px;
-      border: 1px solid var(--border);
-    }
-
-    /* ===== Info ===== */
-    .info h2 {
-      font-size: 38px;
-      margin-bottom: 8px;
-    }
-
-    .info span {
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 15px;
-    }
-
-    .info p {
-      margin-top: 25px;
-      font-size: 17px;
-      color: var(--text-muted);
-    }
-
-    /* ===== Sections ===== */
-    .section {
-      margin-top: 45px;
-    }
-
-    .section h3 {
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
-
-    .section ul {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .section li {
-      background: var(--bg-dark);
-      padding: 12px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      font-size: 14px;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #64748b;
-      border-top: 1px solid var(--border);
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 900px) {
-      .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .section ul {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <title>من أنا – Templio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-  <img src="Logo.png" alt="Templio">
-  <h1>Templio</h1>
+  <div class="logo-box">
+    🌍
+    <img src="images/Logo.png">
+    <span>Templio</span>
+  </div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="works.html">الأعمال</a>
+    <a href="templates.html">القوالب</a>
+  </nav>
 </header>
 
-<section class="container">
+<section class="section" style="display:grid; grid-template-columns: 1fr 1fr; gap:50px; align-items:center;">
 
-  <div class="profile-img">
-    <img src="Ziad.jpg" alt="Ziad">
-  </div>
-
-  <div class="info">
-    <h2>زياد حسين</h2>
-    <span>مصمم جرافيك وصانع قوالب</span>
-
+  <!-- TEXT -->
+  <div>
+    <h1>أنا زياد</h1>
     <p>
-      أنا زياد، مصمم جرافيك متخصص في تصميم الهويات البصرية
-      وقوالب السوشيال ميديا. بشتغل على بناء تصاميم
-      نظيفة وعصرية تركز على الفخامة، الثقة، وسهولة
-      الاستخدام، وده اللي بقدمه من خلال براند Templio.
+      مصمم جرافيك متخصص في تصميم القوالب الجاهزة  
+      وبناء الهوية البصرية للبراندات الرقمية.
     </p>
 
-    <div class="section">
-      <h3>المهارات</h3>
-      <ul>
-        <li>Graphic Design</li>
-        <li>Social Media Templates</li>
-        <li>Brand Identity</li>
-        <li>Logo Design</li>
-        <li>Visual Systems</li>
-        <li>Creative Direction</li>
-      </ul>
-    </div>
+    <p>
+      بدأت Templio بفكرة بسيطة:  
+      إن التصميم لازم يكون له هدف  
+      مش مجرد شكل.
+    </p>
 
-    <div class="section">
-      <h3>الأدوات</h3>
-      <ul>
-        <li>Adobe Photoshop</li>
-        <li>Adobe Illustrator</li>
-        <li>Photopia</li>
-        <li>Canva (Pro)</li>
-      </ul>
-    </div>
+    <p>
+      كل لون، مساحة، وخط  
+      ليه سبب مدروس  
+      يخدم العلامة التجارية  
+      ويقربها من جمهورها.
+    </p>
+  </div>
+
+  <!-- IMAGE -->
+  <div class="card">
+    <img src="images/Ziad.jpg" alt="Ziad">
   </div>
 
 </section>
 
-<footer>
-  © 2025 Templio — جميع الحقوق محفوظة
-</footer>
+<!-- ===== VALUES ===== -->
+<section class="section">
+  <h1>قيم Templio</h1>
+
+  <div class="grid">
+    <div class="card" style="padding:30px;">
+      <h3>الوضوح</h3>
+      <p>تصميم مفهوم، مباشر، وسهل الاستخدام.</p>
+    </div>
+    <div class="card" style="padding:30px;">
+      <h3>الفخامة</h3>
+      <p>إحساس بصري يعكس قيمة البراند.</p>
+    </div>
+    <div class="card" style="padding:30px;">
+      <h3>النتيجة</h3>
+      <p>كل تصميم له هدف تجاري واضح.</p>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
