@@ -1,0 +1,278 @@
+/* ================== GLOBAL ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", Arial, sans-serif;
+}
+
+body {
+  background-color: #0e0e11;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+/* ================== HEADER ================== */
+header {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1f1f26;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-box img {
+  width: 46px;
+}
+
+.logo-box span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #b5b5b5;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00e5ff;
+}
+
+/* ================== SECTIONS ================== */
+.section {
+  padding: 70px 60px;
+}
+
+.section h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 700px;
+  color: #b5b5b5;
+  font-size: 18px;
+}
+
+/* ================== GRID ================== */
+.grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: #15151b;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* ================== ADMIN ================== */
+.admin-container {
+  max-width: 600px;
+  margin: 80px auto;
+  background-color: #15151b;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.admin-container h2 {
+  margin-bottom: 20px;
+}
+
+.admin-container input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.admin-container button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background-color: #00e5ff;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+pre {
+  background: #0e0e11;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #00e5ff;
+  overflow-x: auto;
+}
+2️⃣ الصفحة الرئيسية – index.html
+تحط الكود ده كله في index.html
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Templio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-box">
+    🌍
+    <img src="images/Logo.png">
+    <span>Templio</span>
+  </div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="works.html">الأعمال</a>
+    <a href="templates.html">القوالب</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h1>زياد – مصمم جرافيك</h1>
+  <p>
+    منصة شخصية لعرض أعمالي الاحترافية وبيع القوالب الجاهزة  
+    القوالب يتم شراؤها مباشرة من Etsy
+  </p>
+</section>
+
+</body>
+</html>
+3️⃣ صفحة الأعمال – works.html
+تحطها في works.html
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الأعمال</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-box">
+    🌍
+    <img src="images/Logo.png">
+    <span>Templio</span>
+  </div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="templates.html">القوالب</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h1>أعمالي</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img src="images/works/example.jpg">
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+4️⃣ صفحة القوالب – templates.html
+تحطها في templates.html
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>القوالب</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-box">
+    🌍
+    <img src="images/Logo.png">
+    <span>Templio</span>
+  </div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="works.html">الأعمال</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h1>القوالب الجاهزة</h1>
+
+  <div class="grid">
+    <a href="https://etsy.com" target="_blank" class="card">
+      <img src="images/templates/example.jpg">
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
+5️⃣ صفحة الأدمن – admin.html
+دي تولّد كود مش “تلعب في الموقع”
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="admin-container">
+  <h2>إضافة عمل</h2>
+  <input id="wimg" placeholder="اسم الصورة">
+  <button onclick="work()">توليد كود العمل</button>
+  <pre id="wout"></pre>
+
+  <h2 style="margin-top:40px;">إضافة قالب</h2>
+  <input id="timg" placeholder="اسم الصورة">
+  <input id="tlink" placeholder="رابط Etsy">
+  <button onclick="temp()">توليد كود القالب</button>
+  <pre id="tout"></pre>
+</div>
+
+<script>
+function work(){
+  wout.textContent =
+`<div class="card">
+  <img src="images/works/${wimg.value}">
+</div>`;
+}
+
+function temp(){
+  tout.text
