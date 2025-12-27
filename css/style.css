@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #1f1f26;
+  border-bottom: 1px solid #fffffff;
 }
 
 .logo-box {
