@@ -2,73 +2,48 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>من أنا – Templio</title>
+  <title>من أنا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about{
+      max-width:900px;
+      margin:60px auto;
+      padding:20px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+    .about img{
+      width:100%;
+      border-radius:20px;
+    }
+    @media(max-width:768px){
+      .about{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-box">
-    <img src="images/Logo.png">
-    <span>Templio</span>
-  </div>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="works.html">الأعمال</a>
-    <a href="templates.html">القوالب</a>
-  </nav>
-</header>
-
-<section class="section" style="display:grid; grid-template-columns: 1fr 1fr; gap:50px; align-items:center;">
-
-  <!-- TEXT -->
+<div class="about">
   <div>
     <h1>أنا زياد</h1>
     <p>
-      مصمم جرافيك متخصص في تصميم القوالب الجاهزة  
-      وبناء الهوية البصرية للبراندات الرقمية.
+      مصمم جرافيك متخصص في القوالب الجاهزة
+      والهوية البصرية البسيطة.
     </p>
-
     <p>
-      بدأت Templio بفكرة بسيطة:  
-      إن التصميم لازم يكون له هدف  
-      مش مجرد شكل.
+      بحب التصميم الهادي اللي يخدم الهدف،
+      مش اللي يوجع العين.
     </p>
-
     <p>
-      كل لون، مساحة، وخط  
-      ليه سبب مدروس  
-      يخدم العلامة التجارية  
-      ويقربها من جمهورها.
+      Templio هو المكان اللي بحط فيه
+      شغلي بالشكل اللي يستاهله.
     </p>
   </div>
 
-  <!-- IMAGE -->
-  <div class="card">
-    <img src="images/Ziad.jpg" alt="Ziad">
-  </div>
-
-</section>
-
-<!-- ===== VALUES ===== -->
-<section class="section">
-  <h1>قيم Templio</h1>
-
-  <div class="grid">
-    <div class="card" style="padding:30px;">
-      <h3>الوضوح</h3>
-      <p>تصميم مفهوم، مباشر، وسهل الاستخدام.</p>
-    </div>
-    <div class="card" style="padding:30px;">
-      <h3>الفخامة</h3>
-      <p>إحساس بصري يعكس قيمة البراند.</p>
-    </div>
-    <div class="card" style="padding:30px;">
-      <h3>النتيجة</h3>
-      <p>كل تصميم له هدف تجاري واضح.</p>
-    </div>
-  </div>
-</section>
+  <img src="images/Ziad.jpg" alt="Ziad">
+</div>
 
 </body>
 </html>
