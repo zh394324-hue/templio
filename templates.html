@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>القوالب</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .masonry{
+      column-count:3;
+      column-gap:20px;
+      padding:30px;
+    }
+    .masonry a{
+      display:block;
+      margin-bottom:20px;
+    }
+    .masonry img{
+      width:100%;
+      border-radius:16px;
+    }
+    @media(max-width:900px){.masonry{column-count:2;}}
+    @media(max-width:600px){.masonry{column-count:1;}}
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-box">
-    <img src="images/Logo.png">
-    <span>Templio</span>
-  </div>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="works.html">الأعمال</a>
-  </nav>
-</header>
-
-<section class="section">
-  <h1>القوالب الجاهزة</h1>
-
-  <div class="grid">
-    <a href="https://etsy.com" target="_blank" class="card">
-      <img src="images/templates/example.jpg">
-    </a>
-  </div>
-</section>
+<div class="masonry">
+  <a href="https://etsy.com" target="_blank">
+    <img src="images/templates/1.jpg">
+  </a>
+  <a href="https://etsy.com" target="_blank">
+    <img src="images/templates/2.jpg">
+  </a>
+</div>
 
 </body>
 </html>
