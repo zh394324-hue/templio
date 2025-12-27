@@ -3,38 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>الأعمال</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .masonry{
+      column-count:3;
+      column-gap:20px;
+      padding:30px;
+    }
+    .masonry img{
+      width:100%;
+      margin-bottom:20px;
+      border-radius:16px;
+      break-inside:avoid;
+    }
+    @media(max-width:900px){.masonry{column-count:2;}}
+    @media(max-width:600px){.masonry{column-count:1;}}
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-box">
-    <img src="images/Logo.png">
-    <span>Templio</span>
-  </div>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="templates.html">القوالب</a>
-  </nav>
-</header>
-
-<section class="section">
-  <h1>أعمالي</h1>
-  <div class="grid">
-<div class="card">
-  <img src="images/works/Logo2.jpg">
+<div class="masonry">
+  <img src="images/works/1.jpg">
+  <img src="images/works/2.jpg">
+  <img src="images/works/3.jpg">
 </div>
-  <div class="card">
-  <img src="images/works/Logo1.png">
-</div>
-  <div class="card">
-  <img src="images/works/632.jpg">
-</div>
-     <div class="card">
-      <img src="images/works/example.jpg">
-    </div>
-  </div>
-</section>
 
 </body>
 </html>
