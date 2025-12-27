@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #fffffff;
+  border-bottom: 1px solid #1f1f2b;
 }
 
 .logo-box {
@@ -40,13 +40,13 @@ header {
 nav a {
   margin-left: 30px;
   text-decoration: none;
-  color: #fffffff;
+  color: #b5b5b5;
   font-size: 17px;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #fffffff;
+  color: #00e5ff;
 }
 
 /* ================== SECTIONS ================== */
