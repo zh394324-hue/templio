@@ -8,7 +8,7 @@
 
 body {
   background-color: #0b1220;
-  color: #fffffff;
+  color: #ffffff; /* تصحيح بسيط */
   line-height: 1.7;
 }
 
@@ -37,6 +37,13 @@ header {
   font-weight: 700;
 }
 
+/* ✅ الكلمة اللي تحت الشعار */
+.logo-box p,
+.logo-box small {
+  color: #ffffff;
+}
+
+/* ================== NAV ================== */
 nav a {
   margin-left: 30px;
   text-decoration: none;
