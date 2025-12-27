@@ -177,4 +177,47 @@ pre {
     object-fit: cover; /* لضمان عدم ضغط الصورة أو مطّها */
     border: 1px solid #333; /* تحديد بسيط ليظهر جمال التصميم */
   }
-    
+    /* الحاوية الأساسية */
+.cards-grid {
+  display: grid;
+  /* المسافة بين الكروت */
+  gap: 20px; 
+  padding: 20px;
+  /* السر هنا: ينشئ أعمدة تلقائية، كل كارت لا يقل عن 300 بكسل */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* تنسيق الكارت نفسه */
+.card {
+  background: #1a1a1a; /* خلفية رمادية غامقة شيك */
+  border-radius: 15px;
+  overflow: hidden; /* لمنع الصورة من الخروج عن الحواف */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333;
+}
+
+/* تأثير عند تمرير الماوس */
+.card:hover {
+  transform: translateY(-10px); /* يرتفع الكارت للأعلى قليلاً */
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2); /* إضاءة خفيفة */
+}
+
+/* تنسيق الصور داخل الكروت */
+.card img {
+  width: 100%;
+  height: 250px; /* ارتفاع ثابت لتوحيد شكل الكروت */
+  object-fit: cover; /* أهم خاصية لعدم مط الصورة */
+  display: block;
+}
+
+/* للموبايل: إذا كانت الشاشة أصغر من 600 بكسل */
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr; /* كارت واحد فقط في العرض */
+    gap: 15px;
+  }
+  .card img {
+    height: 200px; /* تصغير الارتفاع قليلاً للموبايل */
+  }
+  }
+  
