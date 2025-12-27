@@ -143,3 +143,19 @@ pre {
     grid-template-columns:1fr;
   }
 }
+.gallery-container {
+  display: grid;
+  /* إنشاء 3 أعمدة متساوية، وتتغير تلقائياً حسب حجم الشاشة */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; /* المسافة بين الصور */
+  padding: 20px;
+  background-color: #000; /* لون الخلفية الأسود كما في صورتك */
+}
+
+.gallery-container img {
+  width: 100%; /* تجعل الصورة تأخذ عرض العمود بالكامل */
+  height: 250px; /* توحيد الارتفاع لكل الصور للقضاء على الفراغات */
+  object-fit: cover; /* أهم خاصية: تجعل الصورة تملأ المربع بدون تمطيط */
+  border-radius: 8px; /* اختياري: حواف ناعمة */
+  }
+  
