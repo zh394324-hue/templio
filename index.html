@@ -2,89 +2,55 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Templio – Design That Sells</title>
+  <title>Templio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .center-hero{
+      min-height: 100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      gap:25px;
+    }
+    .center-hero img{
+      width:90px;
+    }
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .hero-buttons a{
+      padding:14px 28px;
+      border-radius:30px;
+      text-decoration:none;
+      font-size:17px;
+      border:1px solid #00e5ff;
+      color:#00e5ff;
+      transition:.3s;
+    }
+    .hero-buttons a:hover{
+      background:#00e5ff;
+      color:#000;
+    }
+  </style>
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
-<header>
-  <div class="logo-box">
-    <img src="images/Logo.png" alt="Templio Logo">
-    <span>Templio</span>
+<div class="center-hero">
+  <img src="images/Logo.png" alt="Templio">
+  <h1>Templio</h1>
+  <p>تصاميم هادئة • ذكية • قابلة للبيع</p>
+
+  <div class="hero-buttons">
+    <a href="works.html">شاهد الأعمال</a>
+    <a href="templates.html">شاهد القوالب</a>
   </div>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="about.html">من أنا</a>
-    <a href="works.html">الأعمال</a>
-    <a href="templates.html">القوالب</a>
-  </nav>
-</header>
-
-<!-- ===== HERO ===== -->
-<section class="section" style="padding-top:90px;">
-  <h1>
-    تصميم مش شكله حلو وخلاص  
-    <br>
-    <span style="color:#00e5ff;">تصميم بيبيع</span>
-  </h1>
-
-  <p>
-    Templio منصة تصميم متخصصة في  
-    القوالب الجاهزة + الهوية البصرية + محتوى السوشيال  
-    بأسلوب احترافي يخدم البراند ويزود المبيعات
-  </p>
-</section>
-
-<!-- ===== STATS ===== -->
-<section class="section">
-  <div class="grid">
-    <div class="card" style="padding:30px;">
-      <h2 style="color:#00e5ff;">+120</h2>
-      <p>تصميم احترافي</p>
-    </div>
-    <div class="card" style="padding:30px;">
-      <h2 style="color:#00e5ff;">+30</h2>
-      <p>قالب جاهز للبيع</p>
-    </div>
-    <div class="card" style="padding:30px;">
-      <h2 style="color:#00e5ff;">100%</h2>
-      <p>تصاميم مخصصة للبراند</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SERVICES ===== -->
-<section class="section">
-  <h1>ماذا أقدّم؟</h1>
-
-  <div class="grid">
-    <div class="card" style="padding:35px;">
-      <h3>قوالب سوشيال ميديا</h3>
-      <p>تصاميم جاهزة قابلة للتعديل، مناسبة للإعلانات والمحتوى اليومي.</p>
-    </div>
-
-    <div class="card" style="padding:35px;">
-      <h3>هوية بصرية</h3>
-      <p>ألوان، أسلوب، وتنسيق يخلي البراند معروف ومميز.</p>
-    </div>
-
-    <div class="card" style="padding:35px;">
-      <h3>تصميم بيعي</h3>
-      <p>مش تصميم شكله حلو، تصميم يخدم الهدف ويحقق نتيجة.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA ===== -->
-<section class="section">
-  <div class="card" style="padding:50px; text-align:center;">
-    <h1>جاهز تشوف الشغل الحقيقي؟</h1>
-    <p>تصفح الأعمال أو القوالب الجاهزة</p>
-    <br>
-    <a href="works.html" style="color:#00e5ff; font-size:20px;">عرض الأعمال →</a>
-  </div>
-</section>
+</div>
 
 </body>
 </html>
