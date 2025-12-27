@@ -133,38 +133,28 @@ pre {
   border-radius: 10px;
   color: #00e5ff;
   overflow-x: auto;
-/* ===== FIXED GRID (WORKS & TEMPLATES) ===== */
-.grid-fixed{
-  max-width:1200px;
-  margin:40px auto;
-  padding:0 20px;
-
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:25px;
+.grid-fixed {
+  display: grid;
+  grid-template-columns: 1fr; /* الموبايل: صورة صوره */
+  gap: 10px;
 }
 
-.grid-fixed img{
-  width:100%;
-  display:block;
-  border-radius:16px;
-  transition:.3s;
+.grid-fixed img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.grid-fixed img:hover{
-  transform:scale(1.03);
-}
-
-/* ===== TABLET ===== */
-@media (max-width:900px){
-  .grid-fixed{
-    grid-template-columns:repeat(4, 1fr);
+/* التابلت: كل عمود 3 صور */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .grid-fixed {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* ===== MOBILE ===== */
-@media (max-width:600px){
-  .grid-fixed{
-    grid-template-columns:1fr;
+/* الكمبيوتر: كل عمود 4 صور */
+@media (min-width: 1201px) {
+  .grid-fixed {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
