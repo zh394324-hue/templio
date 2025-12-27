@@ -156,9 +156,9 @@ pre {
 }
 
 /* ===== TABLET ===== */
-@media (max-width:1000px){
+@media (max-width:900px){
   .grid-fixed{
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:repeat(4, 1fr);
   }
 }
 
