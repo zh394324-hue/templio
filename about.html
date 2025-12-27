@@ -2,47 +2,122 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>من أنا</title>
+  <title>من أنا – Templio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+
   <style>
-    .about{
-      max-width:900px;
+    .about-wrapper{
+      max-width:1000px;
       margin:60px auto;
       padding:20px;
+    }
+
+    .about-top{
+      display:flex;
+      gap:40px;
+      align-items:center;
+      margin-bottom:50px;
+    }
+
+    .about-top img{
+      width:180px;
+      border-radius:18px;
+    }
+
+    .about-top h1{
+      margin-bottom:10px;
+    }
+
+    .about-top p{
+      color:#b5b5b5;
+      line-height:1.8;
+    }
+
+    .about-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:40px;
     }
-    .about img{
-      width:100%;
-      border-radius:20px;
+
+    .about-box{
+      background:#15151b;
+      padding:30px;
+      border-radius:18px;
     }
+
+    .about-box h3{
+      margin-bottom:15px;
+      color:#00e5ff;
+    }
+
+    .about-box ul{
+      list-style:none;
+      line-height:2;
+      color:#b5b5b5;
+      padding:0;
+    }
+
     @media(max-width:768px){
-      .about{grid-template-columns:1fr;}
+      .about-top{
+        flex-direction:column;
+        text-align:center;
+      }
+      .about-grid{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="about">
-  <div>
-    <h1>أنا زياد</h1>
-    <p>
-      مصمم جرافيك متخصص في القوالب الجاهزة
-      والهوية البصرية البسيطة.
-    </p>
-    <p>
-      بحب التصميم الهادي اللي يخدم الهدف،
-      مش اللي يوجع العين.
-    </p>
-    <p>
-      Templio هو المكان اللي بحط فيه
-      شغلي بالشكل اللي يستاهله.
-    </p>
+<div class="about-wrapper">
+
+  <!-- ===== TOP INFO ===== -->
+  <div class="about-top">
+    <img src="images/Ziad.jpg" alt="Ziad">
+
+    <div>
+      <h1>زياد</h1>
+      <p>
+        مصمم جرافيك متخصص في تصميم القوالب الجاهزة
+        والهوية البصرية الهادية.
+        <br>
+        أركز على التصميم الواضح، البسيط،
+        والقابل للبيع.
+      </p>
+    </div>
   </div>
 
-  <img src="images/Ziad.jpg" alt="Ziad">
+  <!-- ===== DETAILS ===== -->
+  <div class="about-grid">
+
+    <!-- SKILLS -->
+    <div class="about-box">
+      <h3>المهارات</h3>
+      <ul>
+        <li>تصميم قوالب سوشيال ميديا</li>
+        <li>الهوية البصرية Branding</li>
+        <li>تصميم إعلاني</li>
+        <li>تنظيم المحتوى البصري</li>
+        <li>تصميم موجه للبيع</li>
+      </ul>
+    </div>
+
+    <!-- SOFTWARE -->
+    <div class="about-box">
+      <h3>البرامج المستخدمة</h3>
+      <ul>
+        <li>Adobe Photoshop</li>
+        <li>Adobe Illustrator</li>
+        <li>Adobe XD</li>
+        <li>Canva (Advanced)</li>
+        <li>Figma</li>
+      </ul>
+    </div>
+
+  </div>
+
 </div>
 
 </body>
