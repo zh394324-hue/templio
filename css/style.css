@@ -174,14 +174,14 @@ pre {
 }
 
 .top-nav a[data-type="templates"]{
-  color:#8aff8a;
-  border-color:#8aff8a;
+  color:#00e5ff;
+  border-color:#00e5ff;
 }
 
 /* ===== HOVER ===== */
 .top-nav a:hover{
   background:currentColor;
-  color:#000;
+  color:#ffffff;
 }
 
 /* ===== MOBILE ===== */
