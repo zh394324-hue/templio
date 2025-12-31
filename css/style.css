@@ -141,3 +141,54 @@ pre {
   color: #00e5ff;
   overflow-x: auto;
   }
+/* ===== TOP NAV BASE ===== */
+.top-nav{
+  position:fixed;
+  top:20px;
+  right:20px;
+  display:flex;
+  gap:12px;
+  z-index:999;
+}
+
+.top-nav a{
+  padding:10px 22px;
+  border-radius:30px;
+  font-size:15px;
+  text-decoration:none;
+  background:rgba(14,14,17,0.7);
+  backdrop-filter: blur(6px);
+  transition:.3s;
+  border:1px solid;
+}
+
+/* ===== COLORS FROM CSS ONLY ===== */
+.top-nav a[data-type="about"]{
+  color:#b5b5b5;
+  border-color:#b5b5b5;
+}
+
+.top-nav a[data-type="works"]{
+  color:#00e5ff;
+  border-color:#00e5ff;
+}
+
+.top-nav a[data-type="templates"]{
+  color:#8aff8a;
+  border-color:#8aff8a;
+}
+
+/* ===== HOVER ===== */
+.top-nav a:hover{
+  background:currentColor;
+  color:#000;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+  .top-nav{
+    top:12px;
+    right:50%;
+    transform:translateX(50%);
+  }
+}
