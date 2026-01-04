@@ -161,34 +161,3 @@ pre {
   transition:.3s;
   border:1px solid;
 }
-
-/* ===== COLORS FROM CSS ONLY ===== */
-.top-nav a[data-type="about"]{
-  color:#00e5ff;
-  border-color:#00e5ff;
-}
-
-.top-nav a[data-type="works"]{
-  color:#00e5ff;
-  border-color:#00e5ff;
-}
-
-.top-nav a[data-type="templates"]{
-  color:#00e5ff;
-  border-color:#00e5ff;
-}
-
-/* ===== HOVER ===== */
-.top-nav a:hover{
-  background:currentColor;
-  color:#ffffff;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:300px){
-  .top-nav{
-    top:6px;
-    right:25%;
-    transform:translateX(25%);
-  }
-}
