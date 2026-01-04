@@ -5,7 +5,55 @@
   <title>من أنا – Templio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+.top-nav{
+  position: fixed;
+  top:14px;
+  left:14px;
+  display:flex;
+  gap:10px;
+  z-index:999;
+}
 
+/* زر عام */
+.top-nav a{
+  font-size:12px;
+  padding:5px 10px;
+  text-decoration:none;
+  font-weight:500;
+  border-radius:4px;
+  letter-spacing:0.3px;
+  transition:0.3s;
+}
+
+/* ألوان الأزرار */
+.btn-home{
+  background:#ffffff;
+  color:#0b1220;
+}
+
+.btn-works{
+  background:#1e293b;
+  color:#ffffff;
+}
+
+.btn-templates{
+  background:#334155;
+  color:#ffffff;
+}
+
+.top-nav a:hover{
+  opacity:0.8;
+}
+
+/* موبايل */
+@media (max-width:600px){
+  .top-nav a{
+    font-size:11px;
+    padding:4px 8px;
+  }
+}
+</style>
   <style>
     .about-wrapper{
       max-width:1000px;
@@ -70,6 +118,12 @@
   </style>
 </head>
 <body>
+  <div class="top-nav">
+  <a href="index.html" class="btn-home">الرئيسية</a>
+  <a href="works.html" class="btn-works">الأعمال</a>
+  <a href="templates.html" class="btn-templates">القوالب</a>
+</div>
+  
 <div class="top-nav">
   <a href="works.html">الأعمال</a>
   <a href="templates.html">القوالب</a>
